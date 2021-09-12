@@ -342,7 +342,7 @@ avg(1:10)</code></pre>
 ##     else &quot;ts&quot;
 ##     y
 ## }
-## &lt;bytecode: 0x7ff0580f8788&gt;
+## &lt;bytecode: 0x7fcc73291500&gt;
 ## &lt;environment: namespace:stats&gt;</code></pre>
 <p>If we want to be absolutely sure that we use the dplyr filter, we can use</p>
 <pre class="r"><code>dplyr::filter</code></pre>
@@ -350,7 +350,7 @@ avg(1:10)</code></pre>
 ## {
 ##     UseMethod(&quot;filter&quot;)
 ## }
-## &lt;bytecode: 0x7ff04fc9eda0&gt;
+## &lt;bytecode: 0x7fcc73ccde70&gt;
 ## &lt;environment: namespace:dplyr&gt;</code></pre>
 <p>Also note that if we want to use a function in a package without loading the entire package, we can use the double colon as well.</p>
 <p>For more on this more advanced topic we recommend the R packages book.</p>
@@ -427,7 +427,17 @@ if(all(x&gt;0)){
 <ol start="3" style="list-style-type: decimal">
 <li>The function <em>nchar</em> tells you how many characters long a character vector is. Write a line of code that assigns to the object new_names the state abbreviation when the state name is longer than 8 characters.</li>
 </ol>
-<pre class="r"><code>new_names &lt;- ifelse(nchar(murders$state)&gt;8, murders$abb, murders$state)</code></pre>
+<pre class="r"><code>new_names &lt;- ifelse(nchar(murders$state)&gt;8, murders$abb, murders$state)
+new_names</code></pre>
+<pre><code>##  [1] &quot;Alabama&quot;  &quot;Alaska&quot;   &quot;Arizona&quot;  &quot;Arkansas&quot; &quot;CA&quot;       &quot;Colorado&quot;
+##  [7] &quot;CT&quot;       &quot;Delaware&quot; &quot;DC&quot;       &quot;Florida&quot;  &quot;Georgia&quot;  &quot;Hawaii&quot;  
+## [13] &quot;Idaho&quot;    &quot;Illinois&quot; &quot;Indiana&quot;  &quot;Iowa&quot;     &quot;Kansas&quot;   &quot;Kentucky&quot;
+## [19] &quot;LA&quot;       &quot;Maine&quot;    &quot;Maryland&quot; &quot;MA&quot;       &quot;Michigan&quot; &quot;MN&quot;      
+## [25] &quot;MS&quot;       &quot;Missouri&quot; &quot;Montana&quot;  &quot;Nebraska&quot; &quot;Nevada&quot;   &quot;NH&quot;      
+## [31] &quot;NJ&quot;       &quot;NM&quot;       &quot;New York&quot; &quot;NC&quot;       &quot;ND&quot;       &quot;Ohio&quot;    
+## [37] &quot;Oklahoma&quot; &quot;Oregon&quot;   &quot;PA&quot;       &quot;RI&quot;       &quot;SC&quot;       &quot;SD&quot;      
+## [43] &quot;TN&quot;       &quot;Texas&quot;    &quot;Utah&quot;     &quot;Vermont&quot;  &quot;Virginia&quot; &quot;WA&quot;      
+## [49] &quot;WV&quot;       &quot;WI&quot;       &quot;Wyoming&quot;</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Create a function sum_n that for any given value, say n, computes the sum of the integers from 1 to n (inclusive). Use the function to determine the sum of integers from 1 to 5,000.</li>
 </ol>
@@ -452,7 +462,9 @@ my_func&lt;-function(y){
   x&lt;-5
   y+5
 }
-# Value of x is still 3.</code></pre>
+# Value of x is still 3.
+x</code></pre>
+<pre><code>## [1] 3</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Write a function compute_s_n that for any given n computes the sum S_n = 1^2 + 2^2 + 3^2 + n^2. Report the value of the sum when n=10.</li>
 </ol>
