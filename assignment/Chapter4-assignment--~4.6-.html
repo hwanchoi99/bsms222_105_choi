@@ -449,13 +449,7 @@ nrow(murders_nw)</code></pre>
 </div>
 <p>Make sure murders has been defined with rate and rank and still has all states. Create a table called my_states that contains rows for states satisfying both the conditions: it is in the Northeast or West and the murder rate is less than 1. Use select to show only the state name, the rate, and the rank.</p>
 <pre class="r"><code>my_states &lt;- filter(murders, region %in% c(&quot;Northeast&quot;,&quot;West&quot;)&amp; rate&lt;1)
-my_states</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["abb"],"name":[2],"type":["chr"],"align":["left"]},{"label":["region"],"name":[3],"type":["fct"],"align":["left"]},{"label":["population"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["total"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["population_in_millions"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["rate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"HI","3":"West","4":"1360301","5":"7","6":"1.360301","7":"0.5145920","8":"49"},{"1":"Idaho","2":"ID","3":"West","4":"1567582","5":"12","6":"1.567582","7":"0.7655102","8":"46"},{"1":"Maine","2":"ME","3":"Northeast","4":"1328361","5":"11","6":"1.328361","7":"0.8280881","8":"44"},{"1":"New Hampshire","2":"NH","3":"Northeast","4":"1316470","5":"5","6":"1.316470","7":"0.3798036","8":"50"},{"1":"Oregon","2":"OR","3":"West","4":"3831074","5":"36","6":"3.831074","7":"0.9396843","8":"42"},{"1":"Utah","2":"UT","3":"West","4":"2763885","5":"22","6":"2.763885","7":"0.7959810","8":"45"},{"1":"Vermont","2":"VT","3":"Northeast","4":"625741","5":"2","6":"0.625741","7":"0.3196211","8":"51"},{"1":"Wyoming","2":"WY","3":"West","4":"563626","5":"5","6":"0.563626","7":"0.8871131","8":"43"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-<pre class="r"><code>select(my_states,state,rate,rank)</code></pre>
+select(my_states,state,rate,rank)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["rate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["rank"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Hawaii","2":"0.5145920","3":"49"},{"1":"Idaho","2":"0.7655102","3":"46"},{"1":"Maine","2":"0.8280881","3":"44"},{"1":"New Hampshire","2":"0.3798036","3":"50"},{"1":"Oregon","2":"0.9396843","3":"42"},{"1":"Utah","2":"0.7959810","3":"45"},{"1":"Vermont","2":"0.3196211","3":"51"},{"1":"Wyoming","2":"0.8871131","3":"43"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
