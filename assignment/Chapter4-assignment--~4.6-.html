@@ -500,7 +500,8 @@ my_states</code></pre>
 <ol style="list-style-type: decimal">
 <li>The pipe %&gt;% can be used to perform operations sequentially without having to define intermediate objects. Start by redefining murder to include rate and rank.</li>
 </ol>
-<pre class="r"><code>murders &lt;- mutate(murders, rate =  total / population * 100000, 
+<pre class="r"><code>data(murders)
+murders &lt;- mutate(murders, rate =  total / population * 100000, 
                   rank = rank(-rate))</code></pre>
 <p>In the solution to the previous exercise, we did the following:</p>
 <pre class="r"><code>my_states &lt;- filter(murders, region %in% c(&quot;Northeast&quot;, &quot;West&quot;) &amp; 
