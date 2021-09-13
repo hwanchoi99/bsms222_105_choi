@@ -188,71 +188,746 @@ murders</code></pre>
 <pre class="r"><code># install.packages(&quot;xtable&quot;)
 library(&quot;xtable&quot;)
 sample_table &lt;- mtcars[1:3,1:3]
-print(xtable(sample_table), type=&quot;html&quot;, file=&quot;example.html&quot;)
-
-
-
-
-print(xtable(murders), type=&quot;html&quot;)</code></pre>
-<pre><code>## &lt;!-- html table generated in R 4.1.1 by xtable 1.8-4 package --&gt;
-## &lt;!-- Mon Sep 13 22:02:21 2021 --&gt;
-## &lt;table border=1&gt;
-## &lt;tr&gt; &lt;th&gt;  &lt;/th&gt; &lt;th&gt; state &lt;/th&gt; &lt;th&gt; abb &lt;/th&gt; &lt;th&gt; region &lt;/th&gt; &lt;th&gt; population &lt;/th&gt; &lt;th&gt; total &lt;/th&gt;  &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 1 &lt;/td&gt; &lt;td&gt; Alabama &lt;/td&gt; &lt;td&gt; AL &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 4779736.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 135.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 2 &lt;/td&gt; &lt;td&gt; Alaska &lt;/td&gt; &lt;td&gt; AK &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 710231.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 19.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 3 &lt;/td&gt; &lt;td&gt; Arizona &lt;/td&gt; &lt;td&gt; AZ &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 6392017.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 232.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 4 &lt;/td&gt; &lt;td&gt; Arkansas &lt;/td&gt; &lt;td&gt; AR &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2915918.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 93.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 5 &lt;/td&gt; &lt;td&gt; California &lt;/td&gt; &lt;td&gt; CA &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 37253956.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1257.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 6 &lt;/td&gt; &lt;td&gt; Colorado &lt;/td&gt; &lt;td&gt; CO &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5029196.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 65.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 7 &lt;/td&gt; &lt;td&gt; Connecticut &lt;/td&gt; &lt;td&gt; CT &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 3574097.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 97.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 8 &lt;/td&gt; &lt;td&gt; Delaware &lt;/td&gt; &lt;td&gt; DE &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 897934.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 38.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 9 &lt;/td&gt; &lt;td&gt; District of Columbia &lt;/td&gt; &lt;td&gt; DC &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 601723.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 99.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 10 &lt;/td&gt; &lt;td&gt; Florida &lt;/td&gt; &lt;td&gt; FL &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 19687653.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 669.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 11 &lt;/td&gt; &lt;td&gt; Georgia &lt;/td&gt; &lt;td&gt; GA &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 9920000.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 376.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 12 &lt;/td&gt; &lt;td&gt; Hawaii &lt;/td&gt; &lt;td&gt; HI &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1360301.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 7.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 13 &lt;/td&gt; &lt;td&gt; Idaho &lt;/td&gt; &lt;td&gt; ID &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1567582.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 12.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 14 &lt;/td&gt; &lt;td&gt; Illinois &lt;/td&gt; &lt;td&gt; IL &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 12830632.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 364.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 15 &lt;/td&gt; &lt;td&gt; Indiana &lt;/td&gt; &lt;td&gt; IN &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 6483802.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 142.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 16 &lt;/td&gt; &lt;td&gt; Iowa &lt;/td&gt; &lt;td&gt; IA &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 3046355.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 21.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 17 &lt;/td&gt; &lt;td&gt; Kansas &lt;/td&gt; &lt;td&gt; KS &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2853118.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 63.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 18 &lt;/td&gt; &lt;td&gt; Kentucky &lt;/td&gt; &lt;td&gt; KY &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 4339367.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 116.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 19 &lt;/td&gt; &lt;td&gt; Louisiana &lt;/td&gt; &lt;td&gt; LA &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 4533372.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 351.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 20 &lt;/td&gt; &lt;td&gt; Maine &lt;/td&gt; &lt;td&gt; ME &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1328361.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 11.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 21 &lt;/td&gt; &lt;td&gt; Maryland &lt;/td&gt; &lt;td&gt; MD &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5773552.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 293.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 22 &lt;/td&gt; &lt;td&gt; Massachusetts &lt;/td&gt; &lt;td&gt; MA &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 6547629.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 118.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 23 &lt;/td&gt; &lt;td&gt; Michigan &lt;/td&gt; &lt;td&gt; MI &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 9883640.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 413.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 24 &lt;/td&gt; &lt;td&gt; Minnesota &lt;/td&gt; &lt;td&gt; MN &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5303925.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 53.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 25 &lt;/td&gt; &lt;td&gt; Mississippi &lt;/td&gt; &lt;td&gt; MS &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2967297.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 120.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 26 &lt;/td&gt; &lt;td&gt; Missouri &lt;/td&gt; &lt;td&gt; MO &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5988927.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 321.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 27 &lt;/td&gt; &lt;td&gt; Montana &lt;/td&gt; &lt;td&gt; MT &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 989415.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 12.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 28 &lt;/td&gt; &lt;td&gt; Nebraska &lt;/td&gt; &lt;td&gt; NE &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1826341.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 32.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 29 &lt;/td&gt; &lt;td&gt; Nevada &lt;/td&gt; &lt;td&gt; NV &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2700551.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 84.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 30 &lt;/td&gt; &lt;td&gt; New Hampshire &lt;/td&gt; &lt;td&gt; NH &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1316470.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 31 &lt;/td&gt; &lt;td&gt; New Jersey &lt;/td&gt; &lt;td&gt; NJ &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 8791894.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 246.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 32 &lt;/td&gt; &lt;td&gt; New Mexico &lt;/td&gt; &lt;td&gt; NM &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2059179.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 67.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 33 &lt;/td&gt; &lt;td&gt; New York &lt;/td&gt; &lt;td&gt; NY &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 19378102.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 517.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 34 &lt;/td&gt; &lt;td&gt; North Carolina &lt;/td&gt; &lt;td&gt; NC &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 9535483.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 286.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 35 &lt;/td&gt; &lt;td&gt; North Dakota &lt;/td&gt; &lt;td&gt; ND &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 672591.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 4.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 36 &lt;/td&gt; &lt;td&gt; Ohio &lt;/td&gt; &lt;td&gt; OH &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 11536504.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 310.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 37 &lt;/td&gt; &lt;td&gt; Oklahoma &lt;/td&gt; &lt;td&gt; OK &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 3751351.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 111.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 38 &lt;/td&gt; &lt;td&gt; Oregon &lt;/td&gt; &lt;td&gt; OR &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 3831074.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 36.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 39 &lt;/td&gt; &lt;td&gt; Pennsylvania &lt;/td&gt; &lt;td&gt; PA &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 12702379.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 457.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 40 &lt;/td&gt; &lt;td&gt; Rhode Island &lt;/td&gt; &lt;td&gt; RI &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1052567.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 16.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 41 &lt;/td&gt; &lt;td&gt; South Carolina &lt;/td&gt; &lt;td&gt; SC &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 4625364.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 207.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 42 &lt;/td&gt; &lt;td&gt; South Dakota &lt;/td&gt; &lt;td&gt; SD &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 814180.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 8.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 43 &lt;/td&gt; &lt;td&gt; Tennessee &lt;/td&gt; &lt;td&gt; TN &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 6346105.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 219.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 44 &lt;/td&gt; &lt;td&gt; Texas &lt;/td&gt; &lt;td&gt; TX &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 25145561.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 805.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 45 &lt;/td&gt; &lt;td&gt; Utah &lt;/td&gt; &lt;td&gt; UT &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2763885.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 22.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 46 &lt;/td&gt; &lt;td&gt; Vermont &lt;/td&gt; &lt;td&gt; VT &lt;/td&gt; &lt;td&gt; Northeast &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 625741.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 2.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 47 &lt;/td&gt; &lt;td&gt; Virginia &lt;/td&gt; &lt;td&gt; VA &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 8001024.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 250.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 48 &lt;/td&gt; &lt;td&gt; Washington &lt;/td&gt; &lt;td&gt; WA &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 6724540.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 93.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 49 &lt;/td&gt; &lt;td&gt; West Virginia &lt;/td&gt; &lt;td&gt; WV &lt;/td&gt; &lt;td&gt; South &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 1852994.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 27.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 50 &lt;/td&gt; &lt;td&gt; Wisconsin &lt;/td&gt; &lt;td&gt; WI &lt;/td&gt; &lt;td&gt; North Central &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5686986.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 97.00 &lt;/td&gt; &lt;/tr&gt;
-##   &lt;tr&gt; &lt;td align=&quot;right&quot;&gt; 51 &lt;/td&gt; &lt;td&gt; Wyoming &lt;/td&gt; &lt;td&gt; WY &lt;/td&gt; &lt;td&gt; West &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 563626.00 &lt;/td&gt; &lt;td align=&quot;right&quot;&gt; 5.00 &lt;/td&gt; &lt;/tr&gt;
-##    &lt;/table&gt;</code></pre>
+print(xtable(sample_table), type=&quot;html&quot;, file=&quot;example.html&quot;)</code></pre>
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<pre class="r"><code>library(R2HTML)
+HTML(murders,file=&quot;&quot;)</code></pre>
+<pre><code>## 
+## 
+## &lt;p align= center &gt;
+## &lt;table cellspacing=0 border=1&gt;
+## &lt;caption align=bottom class=captiondataframe&gt;&lt;/caption&gt;
+## &lt;tr&gt;&lt;td&gt;
+##  &lt;table border=0 class=dataframe&gt;
+##  &lt;tbody&gt; 
+##  &lt;tr class= firstline &gt; 
+##      &lt;th&gt;&amp;nbsp;  &lt;/th&gt;
+##      &lt;th&gt;state  &lt;/th&gt;
+##      &lt;th&gt;abb  &lt;/th&gt;
+##      &lt;th&gt;region  &lt;/th&gt;
+##      &lt;th&gt;population  &lt;/th&gt;
+##      &lt;th&gt;total&lt;/th&gt; 
+##  &lt;/tr&gt; 
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;1
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Alabama
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;AL
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;4.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 135
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;2
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Alaska
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;AK
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;7.1e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  19
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;3
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Arizona
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;AZ
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.4e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 232
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;4
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Arkansas
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;AR
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.9e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  93
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;5
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;California
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;CA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.7e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1257
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;6
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Colorado
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;CO
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;5.0e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  65
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;7
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Connecticut
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;CT
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.6e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  97
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;8
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Delaware
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;DE
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;9.0e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  38
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;9
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;District of Columbia
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;DC
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.0e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  99
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;10
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Florida
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;FL
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.0e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 669
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;11
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Georgia
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;GA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;9.9e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 376
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;12
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Hawaii
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;HI
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.4e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   7
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;13
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Idaho
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;ID
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.6e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  12
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;14
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Illinois
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;IL
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.3e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 364
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;15
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Indiana
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;IN
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.5e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 142
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;16
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Iowa
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;IA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.0e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  21
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;17
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Kansas
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;KS
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.9e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  63
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;18
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Kentucky
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;KY
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;4.3e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 116
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;19
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Louisiana
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;LA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;4.5e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 351
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;20
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Maine
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;ME
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.3e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  11
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;21
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Maryland
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MD
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;5.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 293
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;22
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Massachusetts
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.5e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 118
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;23
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Michigan
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MI
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;9.9e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 413
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;24
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Minnesota
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MN
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;5.3e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  53
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;25
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Mississippi
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MS
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.0e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 120
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;26
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Missouri
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MO
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.0e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 321
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;27
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Montana
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;MT
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;9.9e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  12
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;28
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Nebraska
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NE
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  32
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;29
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Nevada
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NV
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.7e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  84
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;30
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;New Hampshire
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NH
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.3e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   5
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;31
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;New Jersey
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NJ
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;8.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 246
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;32
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;New Mexico
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NM
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.1e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  67
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;33
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;New York
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NY
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.9e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 517
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;34
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Carolina
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;NC
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;9.5e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 286
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;35
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Dakota
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;ND
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.7e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   4
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;36
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Ohio
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;OH
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.2e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 310
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;37
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Oklahoma
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;OK
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 111
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;38
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Oregon
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;OR
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;3.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  36
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;39
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Pennsylvania
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;PA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.3e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 457
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;40
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Rhode Island
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;RI
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.1e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  16
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;41
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South Carolina
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;SC
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;4.6e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 207
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;42
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South Dakota
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;SD
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;8.1e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   8
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;43
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Tennessee
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;TN
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.3e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 219
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;44
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Texas
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;TX
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.5e+07
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 805
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;45
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Utah
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;UT
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;2.8e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  22
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;46
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Vermont
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;VT
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Northeast
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.3e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   2
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;47
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Virginia
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;VA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;8.0e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt; 250
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;48
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Washington
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;WA
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;6.7e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  93
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;49
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West Virginia
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;WV
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;South
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;1.9e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  27
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;50
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Wisconsin
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;WI
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;North Central
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;5.7e+06
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;  97
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+## &lt;tr&gt; 
+## &lt;td class=firstcolumn&gt;51
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;Wyoming
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;WY
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;West
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;5.6e+05
+## &lt;/td&gt;
+## &lt;td class=cellinside&gt;   5
+## &lt;/td&gt;&lt;/tr&gt;
+##  
+##  &lt;/tbody&gt;
+## &lt;/table&gt;
+##  &lt;/td&gt;&lt;/table&gt;
+##  &lt;br&gt;</code></pre>
 
 
 
