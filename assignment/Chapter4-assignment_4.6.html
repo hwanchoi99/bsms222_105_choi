@@ -533,7 +533,10 @@ select(my_states, state, rate, rank)</code></pre>
 #  select SOMETHING</code></pre>
 <p>The answer is below.</p>
 <pre class="r"><code>data(murders)
-my_states &lt;- murders %&gt;% mutate(rate=total/population*100000, rank=rank(-rate)) %&gt;% filter(region %in% c(&quot;Northeast&quot;,&quot;West&quot;) &amp; rate&lt;1) %&gt;% select(state, rate, rank)
+my_states &lt;- murders %&gt;%
+    mutate(rate = total/population * 1e+05, rank = rank(-rate)) %&gt;%
+    filter(region %in% c(&quot;Northeast&quot;, &quot;West&quot;) &amp; rate &lt; 1) %&gt;%
+    select(state, rate, rank)
 my_states</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
